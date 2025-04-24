@@ -5,9 +5,14 @@ prepare-commit-msg:
   commands:
     commitzen:
       interactive: true
-      run: npx cz --hook # Or npx cz --hook
-      env:
-        LEFTHOOK: 0
+      run: >
+        if [ "$LEFTHOOK" = "0" ] || [ -n "$AMEND" ]; then
+          exit 0;
+        fi;
+        if [ "$2" = "message" ] || [ "$2" = "template" ] || [ "$2" = "merge" ] || [ "$2" = "squash" ]; then
+          exit 0;
+        fi;
+        exec < /dev/tty && npx cz --hook || true
 
 # Validate commit messages
 commit-msg:

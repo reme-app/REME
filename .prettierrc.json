@@ -11,16 +11,8 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "es5",
-  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-sort-re-exports"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": ["<THIRD_PARTY_MODULES>", "^@(.*)$", "^[.]/", "^[.]{2,}/"],
   "importOrderSortSpecifiers": true,
-  "importOrderCaseInsensitive": true,
-  "overrides": [
-    {
-      "files": "libs/**/index.ts",
-      "options": {
-        "plugins": ["prettier-plugin-sort-re-exports"]
-      }
-    }
-  ]
+  "importOrderCaseInsensitive": true
 }

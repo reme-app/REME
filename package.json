@@ -27,7 +27,7 @@
     "prettier-plugin-sort-re-exports": "^0.1.0",
     "turbo": "^2.5.0"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.11.0",
   "engines": {
     "node": ">=23.8.0"
   },
